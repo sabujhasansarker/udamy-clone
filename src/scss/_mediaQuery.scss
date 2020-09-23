@@ -1,0 +1,15 @@
+@mixin tab {
+  @media (max-width: 769px) {
+    @content;
+  }
+}
+@mixin phn {
+  @media (max-width: 426px) {
+    @content;
+  }
+}
+@mixin C875 {
+  @media (max-width: 875px) {
+    @content;
+  }
+}

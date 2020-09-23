@@ -1,0 +1,13 @@
+$aliment: ("center", "left", "right");
+@each $alien in $aliment {
+  .text-#{$alien} {
+    text-align: #{$alien};
+  }
+}
+
+// flex
+@mixin flex($justify) {
+  display: flex;
+  align-items: center;
+  justify-content: $justify;
+}
