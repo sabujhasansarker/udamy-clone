@@ -1,54 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const NavBar = () => {
-  let navbarLink = [
-    {
-      name: "development",
-      subMenu: [
-        { name: "all development" },
-        {
-          name: "web development",
-          subMenu: [
-            { name: "javaScript" },
-            { name: "react js" },
-            { name: "angular js" },
-            { name: "css" },
-            { name: "node js" },
-            { name: "wordPress" },
-            { name: "PHP" },
-            { name: "python" },
-            { name: "django" },
-          ],
-        },
-        {
-          name: "data science",
-          subMenu: [
-            { name: "machine learning" },
-            { name: "data analysis" },
-            { name: "r" },
-            { name: "python" },
-            { name: "deep learning" },
-          ],
-        },
-      ],
-    },
-    {
-      name: "Business",
-      subMenu: [
-        { name: "all business" },
-        {
-          name: "finance",
-          subMenu: [
-            { name: "finance analysis" },
-            { name: "investing" },
-            { name: "forex" },
-          ],
-        },
-      ],
-    },
-  ];
+import navbarLink from "./Nav.json";
 
+const NavBar = () => {
   const menu = (nav) => {
     return (
       nav.subMenu &&
@@ -72,7 +27,7 @@ const NavBar = () => {
     ));
   };
   return (
-    <header className="navbar">
+    <header>
       <nav>
         <div className="logo">
           <img
@@ -83,36 +38,32 @@ const NavBar = () => {
         <ul className="categories">
           <li>
             Categories
-            {/* <ul>
-              <li>
-                <Link to="/development">Development</Link>
-                <ul>
-                  <li>
-                    <Link to="/development">All Development</Link>
-                  </li>
-                  <li>
-                    <Link to="/web-development">Web Development</Link>
-                    <ul>
-                      <li>
-                        <Link to="/web-development">All Web Development</Link>
-                      </li>
-                      <li>
-                        <Link to="/reactJs">React Js</Link>
-                      </li>
-                      <li>
-                        <Link to="/nodeJs">Node Js</Link>
-                      </li>
-                      <li>
-                        <Link to="/wordPress">WordPress</Link>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            </ul> */}
             {category()}
           </li>
         </ul>
+        <form className="form">
+          <div className="form-group">
+            <label htmlFor="search">
+              <i className="fa fa-search"></i>
+              <input
+                type="text"
+                placeholder="Search for anything "
+                id="search"
+              />
+            </label>
+          </div>
+        </form>
+        <Link to="/business">Udemy for Business</Link>
+        <Link to="/teach">Teach on Udemy</Link>
+        <Link to="/cart">
+          <i className="fa fa-shopping-cart"></i>
+        </Link>
+        <Link to="/login" className="btn">
+          Login
+        </Link>
+        <Link to="/signup" className="btn-bg">
+          sign up
+        </Link>
       </nav>
     </header>
   );

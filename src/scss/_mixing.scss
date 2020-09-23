@@ -11,3 +11,28 @@ $aliment: ("center", "left", "right");
   align-items: center;
   justify-content: $justify;
 }
+
+// button
+%btn {
+  padding: 10px 20px;
+  border-radius: 3px;
+  font-weight: bold;
+  border: 1px solid $btn-bg;
+  color: $btn-bg;
+  font-size: 1rem;
+}
+
+.btn-bg {
+  @extend %btn;
+  background: $btn-bg;
+  color: white;
+  &:hover {
+    background: darken($btn-bg, 10%);
+  }
+}
+.btn {
+  @extend %btn;
+  &:hover {
+    color: darken($btn-bg, 10%);
+  }
+}

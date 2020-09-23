@@ -14,10 +14,23 @@ h5,
 h6,
 span,
 b,
-body {
+body,
+ul {
   margin: 0;
   padding: 0;
   font-family: "Tajawal", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+input:focus {
+  outline: none;
 }
 
 .text {
@@ -32,7 +45,6 @@ body {
   background: $alert-bg;
   padding: 1rem;
   color: darken($alert-bg, 50);
-  //   color: #003640;
   @include flex(space-between);
   @include C875() {
     align-items: start;
@@ -48,5 +60,46 @@ body {
     &:last-child {
       cursor: pointer;
     }
+  }
+}
+
+// header
+header {
+  box-shadow: 0px 5px 10px -3px rgba(0, 0, 0, 0.75);
+  padding: 10px 10px;
+  color: $primary-color;
+  nav {
+    @include flex(space-between);
+    .logo img {
+      width: 100px;
+    }
+    ul ul {
+      display: none;
+    }
+    form {
+      label {
+        position: relative;
+        @include flex(unset);
+
+        input {
+          padding: 10px;
+          border-radius: 100px;
+          width: 46rem;
+          padding-left: 40px;
+          font-size: 1.05rem;
+          border: 1px solid $primary-color;
+          height: 1.5rem;
+        }
+        i {
+          position: absolute;
+          left: 15px;
+          color: $primary-color;
+        }
+      }
+    }
+  }
+  a i::before {
+    font-size: 1.4rem;
+    color: $primary-color;
   }
 }
