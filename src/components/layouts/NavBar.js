@@ -53,15 +53,19 @@ const NavBar = () => {
             </label>
           </div>
         </form>
-        <Link to="/business">Udemy for Business</Link>
-        <Link to="/teach">Teach on Udemy</Link>
-        <Link to="/cart">
+        <Link to="/business" className="business">
+          Udemy for Business
+        </Link>
+        <Link to="/teach" className="teach">
+          Teach on Udemy
+        </Link>
+        <Link to="/cart" className="cart">
           <i className="fa fa-shopping-cart"></i>
         </Link>
-        <Link to="/login" className="btn">
+        <Link to="/login" className="btn login">
           Login
         </Link>
-        <Link to="/signup" className="btn-bg">
+        <Link to="/signup" className="btn-bg signup">
           sign up
         </Link>
       </nav>

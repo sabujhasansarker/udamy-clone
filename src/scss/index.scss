@@ -40,6 +40,14 @@ input:focus {
   }
 }
 
+.container {
+  width: 85%;
+  margin: 0 auto;
+  @include tab() {
+    width: 95%;
+  }
+}
+
 // Alert
 .alert {
   background: $alert-bg;
@@ -68,6 +76,30 @@ header {
   box-shadow: 0px 5px 10px -3px rgba(0, 0, 0, 0.75);
   padding: 10px 10px;
   color: $primary-color;
+  @include tab() {
+    display: none;
+    .login {
+      order: -1;
+    }
+    .signup {
+      order: -1;
+    }
+    .categories {
+      order: 1;
+    }
+    .business {
+      order: 1;
+    }
+    .teach {
+      order: 1;
+    }
+    .cart {
+      order: 1;
+    }
+    form {
+      order: 1;
+    }
+  }
   nav {
     @include flex(space-between);
     .logo img {
@@ -89,6 +121,9 @@ header {
           font-size: 1.05rem;
           border: 1px solid $primary-color;
           height: 1.5rem;
+          @include tab() {
+            display: none;
+          }
         }
         i {
           position: absolute;
@@ -101,5 +136,34 @@ header {
   a i::before {
     font-size: 1.4rem;
     color: $primary-color;
+  }
+}
+
+// banner
+.banner {
+  background: url(https://i.ibb.co/P5bN6bj/7cf844b2-4371-45ea-9ef5-e10ea212eac2-2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 60px 50px 100px;
+  &-content {
+    background: white;
+    max-width: 26rem;
+    color: $primary-color;
+    padding: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
+    h1 {
+      font-size: 2.5rem;
+    }
+    p {
+      font-size: 1.3rem;
+      margin: 0.8rem 20px 0.8rem 0;
+    }
+    input {
+      width: 100%;
+      padding: 14px 10px;
+      border-radius: 2px;
+      border: 1px solid $primary-color;
+      box-sizing: border-box;
+    }
   }
 }
