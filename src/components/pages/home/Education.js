@@ -9,7 +9,7 @@ const Education = ({ container }) => {
           {video ? (
             <div className="video">
               <iframe
-                src="https://www.youtube.com/embed/8s6UNBnXapM?autoplay=1"
+                src="https://www.youtube.com/embed/QFIhEmOd6No?autoplay=1"
                 frameBorder="0"
                 allow=" autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               />

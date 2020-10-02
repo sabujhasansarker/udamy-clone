@@ -35,7 +35,7 @@ const NavBar = () => {
             alt="logo"
           />
         </div>
-        <ul className="categories">
+        <ul className="categories-menu">
           <li>
             Categories
             {category()}
@@ -53,7 +53,7 @@ const NavBar = () => {
             </label>
           </div>
         </form>
-        <Link to="/business" className="business">
+        <Link to="/business" className="business-menu">
           Udemy for Business
         </Link>
         <Link to="/teach" className="teach">

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import NavBar from "./components/layouts/NavBar";
 import Alert from "./components/layouts/Alert";
 import Home from "./components/pages/home/Home";
+import Footer from "./components/layouts/Footer";
 
 const App = () => {
   const [alert, setAlert] = useState(true);
@@ -14,6 +15,7 @@ const App = () => {
         <Switch>
           <Route exact path="/" component={Home} />
         </Switch>
+        <Footer />
       </Router>
     </div>
   );
