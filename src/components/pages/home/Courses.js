@@ -31,11 +31,24 @@ const Courses = ({ container }) => {
             </li>
           ))}
         </ul>
-        {courses.map((c, i) => (
-          <div className="course" key={i}>
-            {c.title}
-          </div>
-        ))}
+        <div className="courses-container">
+          {courses.map((c, i) => (
+            <div className="course" key={i}>
+              <img src={c.image} alt="" />
+              <h4>{c.title}</h4>
+              <div className="review">
+                <p>{c.review.toFixed(1)}</p>
+                {Array.from({ length: c.review }, (_, i) => (
+                  <img src="https://i.ibb.co/j59RP87/untitled-1.png" />
+                ))}
+              </div>
+              <div className="price">
+                <p>${((c.price * c.discount) / 100).toFixed(2)}</p>
+                <p className="discount">${c.price}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
