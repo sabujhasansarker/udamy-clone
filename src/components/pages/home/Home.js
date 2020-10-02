@@ -6,6 +6,7 @@ import Categories from "./Categories";
 import Instructor from "./Instructor";
 import Companies from "./Companies";
 import Business from "./Business";
+import Education from "./Education";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <Instructor container={false} />
       <Companies container={false} />
       <Business container={false} />
+      <Education container={false} />
     </div>
   );
 };

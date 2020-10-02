@@ -29,7 +29,7 @@ const Companies = ({ container }) => {
       <h2>Trusted by companies of all sizes</h2>
       <div className="companies-container">
         {companies.map((companie, index) => (
-          <Link key={index} to={companie.url}>
+          <Link key={index} to={`/${companie.name}`}>
             <img
               src={companie.logo}
               alt={companie.name}

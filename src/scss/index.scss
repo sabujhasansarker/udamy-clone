@@ -237,7 +237,7 @@ section.courses {
 
 // categories
 .categories {
-  padding: 50px;
+  padding: 4rem 0;
   color: $primary-color;
   h2 {
     margin-bottom: 1.6rem;
@@ -263,8 +263,8 @@ section.courses {
 // instructor
 .instructor {
   color: $primary-color;
-  padding: 30px 0;
   position: relative;
+  margin: 3rem 0;
   &-container {
     @include flex(center);
     position: inherit;
@@ -298,6 +298,7 @@ section.courses {
 
 // companies
 .companies {
+  margin: 3rem 0;
   color: $primary-color;
   border: 1px solid #dcdacb;
   border-left: 0;
@@ -322,7 +323,7 @@ section.courses {
 // business
 .business {
   color: white;
-  margin-top: 3rem;
+  margin: 3rem 0;
   &-bg {
     background: #003640;
   }
@@ -331,5 +332,41 @@ section.courses {
   }
   &-left {
     margin-right: 4rem;
+  }
+}
+
+// education
+.education {
+  border: 1px solid #dcdacb;
+  border-left: 0;
+  border-right: 0;
+  padding: 4rem 0;
+  &-left {
+    margin: 0;
+    img {
+      margin: 0;
+    }
+    .play {
+      position: relative;
+      cursor: pointer;
+      &-button img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 70px;
+        border-radius: 50%;
+        background: white;
+      }
+    }
+    .video {
+      iframe {
+        width: 560px;
+        height: 315px;
+      }
+    }
+  }
+  &-right {
+    margin-left: 4rem;
   }
 }
