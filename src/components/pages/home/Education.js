@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const Education = ({ container }) => {
   const [video, setVideo] = useState(false);
   return (
-    <div className={`instructor ${container ? "container" : ""} education`}>
+    <section className={`instructor ${container ? "container" : ""} education`}>
       <div className="instructor-container education-container">
         <div className="education-left">
           {video ? (
@@ -41,7 +41,7 @@ const Education = ({ container }) => {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -25,7 +25,9 @@ const Companies = ({ container }) => {
     },
   ];
   return (
-    <div className={`companies ${container ? "container" : ""} text-center`}>
+    <section
+      className={`companies ${container ? "container" : ""} text-center`}
+    >
       <h2>Trusted by companies of all sizes</h2>
       <div className="companies-container">
         {companies.map((companie, index) => (
@@ -38,7 +40,7 @@ const Companies = ({ container }) => {
           </Link>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

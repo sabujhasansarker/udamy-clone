@@ -1,0 +1,37 @@
+{
+  "courses": [
+    {
+      "category": ["business", "development"],
+      "title": "The Business Intelligence Analyst Course 2020",
+      "image": "https://bit.ly/3narnY3",
+      "review": 24662,
+      "price": 129.99,
+      "discount": 10
+    },
+    {
+      "category": ["business", "it & software"],
+      "title": "The Business Intelligence Analyst Course 2020",
+      "image": "https://bit.ly/36t2fpE",
+      "review": 24662,
+      "price": 129.99,
+      "discount": 10
+    },
+    {
+      "category": ["design", "it & software"],
+      "title": "The Design Intelligence Analyst Course 2020",
+      "image": "https://bit.ly/3ilPKOJ",
+      "review": 24662,
+      "price": 129.99,
+      "discount": 10
+    }
+  ],
+  "categories": [
+    "business",
+    "design",
+    "photography",
+    "development",
+    "marketing",
+    "it & software",
+    "personal development"
+  ]
+}

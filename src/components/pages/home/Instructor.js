@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Instructor = ({ container }) => {
   return (
-    <div className={`instructor ${container ? "container" : ""}`}>
+    <section className={`instructor ${container ? "container" : ""}`}>
       <div className="instructor-bg"></div>
       <div className="instructor-container">
         <img
@@ -22,7 +22,7 @@ const Instructor = ({ container }) => {
           </Link>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -28,6 +28,7 @@ $aliment: ("center", "left", "right");
   color: white;
   &:hover {
     background: darken($btn-bg, 10%);
+    border-color: darken($btn-bg, 10%);
   }
 }
 .btn {

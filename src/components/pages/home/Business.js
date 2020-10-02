@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Business = ({ container }) => {
   return (
-    <div className={`instructor business ${container ? "container" : ""}`}>
+    <section className={`instructor business ${container ? "container" : ""}`}>
       <div className="instructor-bg business-bg"></div>
       <div className="instructor-container">
         <div className="business-left">
@@ -21,7 +21,7 @@ const Business = ({ container }) => {
           alt=""
         />
       </div>
-    </div>
+    </section>
   );
 };
 

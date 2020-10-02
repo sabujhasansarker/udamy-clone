@@ -1,6 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
+
+import data from "../../../cource.json";
 
 const Courses = ({ container }) => {
+  const [active, setActive] = useState(data.categories[0].split(" ").join("-"));
+  const [courses, setCourses] = useState(
+    data.courses.filter((d) => d.category.includes(active) && d)
+  );
+
+  const onClick = (e) => {
+    setActive(e);
+    setCourses(data.courses.filter((d) => d.category.includes(e) && d));
+  };
   return (
     <section className={`courses ${container ? "container" : ""}`}>
       <h2 className="heading">The world's largest selection of courses</h2>
@@ -10,13 +21,21 @@ const Courses = ({ container }) => {
       </p>
       <div className="course">
         <ul>
-          <li className="active">Python</li>
-          <li>Excel</li>
-          <li>Web development</li>
-          <li>Javascript</li>
-          <li>Data science</li>
-          <li>AWS Certificate</li>
+          {data.categories.map((d, i) => (
+            <li
+              key={i}
+              className={`${active === d.split(" ").join("-") && "active"}`}
+              onClick={() => onClick(d)}
+            >
+              {d}
+            </li>
+          ))}
         </ul>
+        {courses.map((c, i) => (
+          <div className="course" key={i}>
+            {c.title}
+          </div>
+        ))}
       </div>
     </section>
   );
