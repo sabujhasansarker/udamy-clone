@@ -10,6 +10,7 @@ $aliment: ("center", "left", "right");
   display: flex;
   align-items: center;
   justify-content: $justify;
+  flex-wrap: wrap;
 }
 
 // button

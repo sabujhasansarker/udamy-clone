@@ -62,6 +62,7 @@ input:focus {
   padding: 1rem;
   color: darken($alert-bg, 50);
   @include flex(space-between);
+  flex-wrap: nowrap;
   @include C875() {
     align-items: start;
   }
@@ -193,6 +194,9 @@ section.courses {
       text-transform: capitalize;
       line-height: 3;
       border-bottom: 1px solid gray;
+      @media (max-width: 1024px) {
+        @include flex(unset);
+      }
       .active {
         border-bottom: 2px solid;
       }
@@ -202,10 +206,23 @@ section.courses {
     }
     .courses-container {
       @include flex(unset);
+      @media (max-width: 575px) {
+        justify-content: center;
+      }
       .course {
-        width: 20%;
+        margin-right: 2rem;
+        @media (max-width: 575px) {
+          margin-right: 1rem;
+        }
+        @include phn() {
+          margin-right: 0;
+        }
         img {
           border-radius: 5px;
+        }
+        .content {
+          display: table-caption;
+          width: 233%;
         }
         h4 {
           font-size: 1rem;
