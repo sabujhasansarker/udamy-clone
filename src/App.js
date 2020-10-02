@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import NavBar from "./components/layouts/NavBar";
 import Alert from "./components/layouts/Alert";
-import Home from "./components/pages/Home";
+import Home from "./components/pages/home/Home";
 
 const App = () => {
   const [alert, setAlert] = useState(true);
@@ -12,9 +12,7 @@ const App = () => {
         {alert && <Alert setAlert={setAlert} />}
         <NavBar />
         <Switch>
-          <div className="container">
-            <Route exact path="/" component={Home} />
-          </div>
+          <Route exact path="/" component={Home} />
         </Switch>
       </Router>
     </div>

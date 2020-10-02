@@ -40,6 +40,15 @@ input:focus {
   }
 }
 
+.heading {
+  font-size: 1.8rem;
+  color: $primary-color;
+}
+.heading-sub-text {
+  color: #73726c;
+  font-size: 1.1rem;
+}
+
 .container {
   width: 85%;
   margin: 0 auto;
@@ -165,5 +174,63 @@ header {
       border: 1px solid $primary-color;
       box-sizing: border-box;
     }
+  }
+}
+
+// courses
+section.courses {
+  padding: 4rem 0;
+  &::after {
+    content: "";
+    // height: 0.7px;
+    width: 100%;
+    background: #8f8e8c;
+    display: block;
+  }
+  .course {
+    margin-top: 2rem;
+    ul {
+      display: grid;
+      grid-auto-columns: max-content;
+      grid-auto-flow: column;
+      grid-gap: 1.6rem;
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #73726c;
+      text-transform: capitalize;
+      line-height: 3;
+      .active::after {
+        content: "";
+        height: 2px;
+        width: 100%;
+        background: gray;
+        display: none;
+        // border-bottom: 2px solid;
+      }
+      li {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+// Get start
+.getStart {
+  background: url(https://s.udemycdn.com/browse_components/shared-assets/purple-intersect.svg)
+    #6e1a52;
+  padding: 50px;
+  text-align: center;
+  color: white;
+  p {
+    margin: 10px;
+    margin-bottom: 30px;
+    font-size: 1.3rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  .btn {
+    color: white;
+    border-color: white;
   }
 }
