@@ -2,7 +2,7 @@ import React from "react";
 
 const Courses = ({ container }) => {
   return (
-    <section className={`courses ${container && "container"}`}>
+    <section className={`courses ${container ? "container" : ""}`}>
       <h2 className="heading">The world's largest selection of courses</h2>
       <p className="heading-sub-text">
         Choose from 130,000 online video courses with new additions published

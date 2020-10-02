@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Category = ({ container }) => {
   return (
-    <div className={`categories ${container && "container"}`}>
+    <div className={`categories ${container ? "container" : ""}`}>
       <h2 className="text-left">Top Categories</h2>
       <div className="categories-container">
         {categories.map((category, index) => (

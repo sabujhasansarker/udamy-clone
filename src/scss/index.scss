@@ -295,3 +295,41 @@ section.courses {
     width: 100%;
   }
 }
+
+// companies
+.companies {
+  color: $primary-color;
+  border: 1px solid #dcdacb;
+  border-left: 0;
+  border-right: 0;
+  &-container {
+    width: 40%;
+    margin: 0 auto;
+    @include flex(space-between);
+    img.mercedes {
+      width: 151px;
+    }
+    a {
+      margin: 30px 20px;
+    }
+  }
+  h2 {
+    padding-top: 30px;
+    font-size: 2rem;
+  }
+}
+
+// business
+.business {
+  color: white;
+  margin-top: 3rem;
+  &-bg {
+    background: #003640;
+  }
+  img {
+    margin: 0;
+  }
+  &-left {
+    margin-right: 4rem;
+  }
+}
