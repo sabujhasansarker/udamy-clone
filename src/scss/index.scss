@@ -234,3 +234,28 @@ section.courses {
     border-color: white;
   }
 }
+
+// categories
+.categories {
+  padding: 50px;
+  color: $primary-color;
+  h2 {
+    margin-bottom: 1.6rem;
+    font-size: 1.7rem;
+  }
+  &-container {
+    @include flex(space-between);
+    flex-wrap: wrap;
+    .category {
+      border: 1px solid #dcdacb;
+      border-radius: 3px;
+      img {
+        display: block;
+      }
+      h3 {
+        padding: 20px 20px 30px;
+        font-size: 1.3rem;
+      }
+    }
+  }
+}

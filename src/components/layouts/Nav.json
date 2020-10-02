@@ -1,6 +1,7 @@
 [
   {
     "name": "development",
+    "img": "https://s.udemycdn.com/home/top-categories/lohp-category-development.jpg",
     "subMenu": [
       { "name": "all development" },
       {
@@ -16,21 +17,23 @@
           { "name": "python" },
           { "name": "django" }
         ]
-      },
-      {
-        "name": "data science",
-        "subMenu": [
-          { "name": "machine learning" },
-          { "name": "data analysis" },
-          { "name": "r" },
-          { "name": "python" },
-          { "name": "deep learning" }
-        ]
       }
     ]
   },
   {
+    "name": "data science",
+    "img": "https://s.udemycdn.com/home/top-categories/lohp-category-personal-development.jpg",
+    "subMenu": [
+      { "name": "machine learning" },
+      { "name": "data analysis" },
+      { "name": "r" },
+      { "name": "python" },
+      { "name": "deep learning" }
+    ]
+  },
+  {
     "name": "Business",
+    "img": "https://s.udemycdn.com/home/top-categories/lohp-category-business.jpg",
     "subMenu": [
       { "name": "all business" },
       {
