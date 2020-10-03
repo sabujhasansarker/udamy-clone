@@ -6,15 +6,16 @@ import navbarLink from "./Nav.json";
 const NavBar = () => {
   const menu = (nav) => {
     return (
-      nav.subMenu &&
-      nav.subMenu.map((sub1, i) => (
-        <ul key={i}>
-          <li>
-            <Link to={`/${sub1.name.split(" ").join("-")}`}>{sub1.name}</Link>
-            {sub1.subMenu && menu(sub1)}
-          </li>
+      nav.subMenu && (
+        <ul>
+          {nav.subMenu.map((sub1, i) => (
+            <li key={i}>
+              <Link to={`/${sub1.name.split(" ").join("-")}`}>{sub1.name}</Link>
+              {sub1.subMenu && menu(sub1)}
+            </li>
+          ))}
         </ul>
-      ))
+      )
     );
   };
 

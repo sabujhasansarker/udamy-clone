@@ -114,8 +114,19 @@ header {
     .logo img {
       width: 100px;
     }
-    ul ul {
-      display: none;
+    ul {
+      cursor: pointer;
+      &:hover {
+        ul {
+          display: block;
+        }
+      }
+      ul {
+        display: none;
+        &:hover ul {
+          display: block;
+        }
+      }
     }
     form {
       label {
@@ -360,8 +371,11 @@ section.courses {
   border-left: 0;
   border-right: 0;
   &-container {
-    width: 40%;
+    width: 50%;
     margin: 0 auto;
+    @media (max-width: 1384px) {
+      width: 75%;
+    }
     @include flex(space-between);
     img.mercedes {
       width: 151px;

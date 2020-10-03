@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import data from "../../../cource.json";
 
 const Courses = ({ container }) => {
-  const [active, setActive] = useState(data.categories[0].split(" ").join("-"));
+  const [active, setActive] = useState(data.categories[0]);
   const [courses, setCourses] = useState(
     data.courses.filter((d) => d.category.includes(active) && d)
   );
@@ -24,7 +24,7 @@ const Courses = ({ container }) => {
           {data.categories.map((d, i) => (
             <li
               key={i}
-              className={`${active === d.split(" ").join("-") && "active"}`}
+              className={`${active === d && "active"}`}
               onClick={() => onClick(d)}
             >
               {d}
@@ -40,7 +40,10 @@ const Courses = ({ container }) => {
                 <div className="review">
                   <p>{c.review.toFixed(1)}</p>
                   {Array.from({ length: c.review }, (_, i) => (
-                    <img src="https://i.ibb.co/j59RP87/untitled-1.png" />
+                    <img
+                      src="https://i.ibb.co/j59RP87/untitled-1.png"
+                      key={i}
+                    />
                   ))}
                 </div>
                 <div className="price">
